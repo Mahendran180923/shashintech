@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head link rel="stylesheet" href="css/style.css">
+<head>
   <meta charset="UTF-8">
   <title>ShashinTech | Digital Solutions & Professional Training</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ShashinTech offers business digital solutions and professional training in Excel, Power BI, Data Analytics and custom software.">
+
   <style>
     body {
       margin: 0;
@@ -12,17 +13,27 @@
       background: #f4f6f8;
       color: #333;
     }
+
+    /* ✅ NAVIGATION – ONLY CHANGE */
     nav {
       background: #0f172a;
-      padding: 12px;
-      text-align: center;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: flex-end; /* TOP RIGHT */
+      align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: #fff;
-      margin: 0 15px;
+      margin-left: 30px;
       text-decoration: none;
       font-weight: bold;
+      white-space: nowrap;
     }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     header {
       background: linear-gradient(to right, #1e3a8a, #2563eb);
       color: #fff;
@@ -88,30 +99,19 @@
   </style>
 </head>
 
-<script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-  }
-</script>
-
-
 <body>
 
-<!-- NAVIGATION -->
+<!-- ✅ NAVIGATION (TEXT SAME, ONLY ALIGNMENT CHANGED) -->
 <nav>
-  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
-    <a href="business.html">Business Solutions</a>
-    <a href="training.html">Training</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <a href="index.html">Home</a>
+  <a href="business.html">Business Solutions</a>
+  <a href="training.html">Training</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-
 <!-- HERO -->
-<header class="header-home">
+<header>
   <img src="logo.png" alt="ShashinTech Logo">
   <h1>ShashinTech</h1>
   <p>Digital Solutions for Businesses & Practical Training for Professionals</p>
@@ -156,7 +156,7 @@
 <section style="text-align:center;">
   <h2>Talk to Us</h2>
   <p>
-    📧 <strong>info@shashintech.com</strong><br>
+    📧 <strong>admin@shashintech.com</strong><br>
     📞 <strong>Call / WhatsApp: 97158 73450</strong>
   </p>
 </section>

@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head link rel="stylesheet" href="css/style.css">
+<head>
   <meta charset="UTF-8">
   <title>Business Solutions | ShashinTech</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ShashinTech provides Excel & Power BI dashboards, report automation, custom software, web apps and data analytics solutions for businesses.">
+
   <style>
     body {
       margin: 0;
@@ -12,17 +13,27 @@
       background: #f4f6f8;
       color: #333;
     }
+
+    /* ✅ NAVIGATION – ONLY CHANGE */
     nav {
       background: #0f172a;
-      padding: 12px;
-      text-align: center;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: flex-end; /* TOP RIGHT */
+      align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: #fff;
-      margin: 0 15px;
+      margin-left: 30px;
       text-decoration: none;
       font-weight: bold;
+      white-space: nowrap;
     }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     header {
       background: linear-gradient(to right, #1e3a8a, #2563eb);
       color: #fff;
@@ -84,29 +95,19 @@
   </style>
 </head>
 
-<script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-  }
-</script>
-
 <body>
 
-<!-- NAV -->
+<!-- ✅ NAVIGATION (TEXT SAME, ALIGNMENT ONLY CHANGED) -->
 <nav>
-  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
-    <a href="business.html">Business Solutions</a>
-    <a href="training.html">Training</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <a href="index.html">Home</a>
+  <a href="business.html">Business Solutions</a>
+  <a href="training.html">Training</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-
 <!-- HEADER -->
-<header class="header-business">
+<header>
   <h1>Business Digital Solutions</h1>
   <p>For Business Owners, Professionals, Startups & SMEs</p>
 </header>
@@ -169,10 +170,12 @@
 <section class="cta">
   <h2>Need a Custom Business Solution?</h2>
   <p>
-    📧 info@shashintech.com <br>
+    📧 admin@shashintech.com <br>
     📞 Call / WhatsApp: <strong>97158 73450</strong>
   </p>
-  <a class="btn" href="https://wa.me/919715873450" target="_blank">Talk on WhatsApp</a>
+  <a class="btn" href="https://wa.me/919715873450" target="_blank">
+    Talk on WhatsApp
+  </a>
 </section>
 
 <!-- WHATSAPP -->

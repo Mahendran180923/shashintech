@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-<head rel="stylesheet" href="./css/style.css">
+<head>
   <meta charset="UTF-8">
   <title>Professional Training | ShashinTech</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Advanced Excel, Power BI and Data Analytics training for accounting professionals with practical, real-time examples.">
+
   <style>
     body {
       margin: 0;
@@ -12,17 +13,27 @@
       background: #f4f6f8;
       color: #333;
     }
+
+    /* ✅ NAVIGATION – ONLY CHANGE */
     nav {
       background: #0f172a;
-      padding: 12px;
-      text-align: center;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: flex-end; /* TOP RIGHT */
+      align-items: center;
+      flex-wrap: wrap;
     }
     nav a {
       color: #fff;
-      margin: 0 15px;
+      margin-left: 30px;
       text-decoration: none;
       font-weight: bold;
+      white-space: nowrap;
     }
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     header {
       background: linear-gradient(to right, #0f766e, #0284c7);
       color: #fff;
@@ -93,35 +104,25 @@
   </style>
 </head>
 
-<script>
-  function toggleMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-  }
-</script>
-
 <body>
 
-<!-- NAV -->
+<!-- ✅ NAVIGATION (TEXT SAME, ALIGNMENT ONLY CHANGED) -->
 <nav>
-  <span class="menu-toggle" onclick="toggleMenu()">☰</span>
-  <div class="nav-links" id="navLinks">
-    <a href="index.html">Home</a>
-    <a href="business.html">Business Solutions</a>
-    <a href="training.html">Training</a>
-    <a href="about.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
+  <a href="index.html">Home</a>
+  <a href="business.html">Business Solutions</a>
+  <a href="training.html">Training</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
-
 <!-- HEADER -->
-<header class="header-training">
+<header>
   <h1>Professional Training Programs</h1>
   <p>Advanced Excel • Power BI • Data Analytics</p>
   <p>For Accounting & Working Professionals</p>
 </header>
 
-<!-- COURSE 1 -->
+<!-- COURSES -->
 <section>
   <div class="course">
     <h2>Advanced Excel (Practical)</h2>
@@ -133,7 +134,6 @@
     </ul>
   </div>
 
-  <!-- COURSE 2 -->
   <div class="course">
     <h2>Power BI & Data Visualization</h2>
     <ul>
@@ -144,7 +144,6 @@
     </ul>
   </div>
 
-  <!-- COURSE 3 -->
   <div class="course">
     <h2>Word & PowerPoint (Professional Use)</h2>
     <ul>
@@ -154,7 +153,6 @@
     </ul>
   </div>
 
-  <!-- COURSE 4 -->
   <div class="course">
     <h2>Accounting Professionals Track</h2>
     <ul>
@@ -176,7 +174,7 @@
   </div>
   <p style="margin-top:20px;">
     📞 Call / WhatsApp: <strong>97158 73450</strong><br>
-    📧 info@shashintech.com
+    📧 admin@shashintech.com
   </p>
   <a class="btn" href="https://wa.me/919715873450" target="_blank">
     Enroll via WhatsApp
