@@ -1,4 +1,6 @@
-/* GLOBAL RESET */
+/* =========================
+   GLOBAL RESET
+   ========================= */
 * {
   box-sizing: border-box;
 }
@@ -11,17 +13,28 @@ body {
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR (DESKTOP + MOBILE)
    ========================= */
+
 nav {
   background: #0f172a;
-  padding: 15px 40px;
+}
+
+.nav-inner {
+  max-width: 1100px;
+  margin: auto;
+  padding: 15px 20px;
   display: flex;
-  justify-content: flex-end; /* 🔥 TOP RIGHT */
+  justify-content: flex-end; /* TOP RIGHT */
   align-items: center;
 }
 
-nav a {
+/* LINKS */
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
   color: #ffffff;
   text-decoration: none;
   font-weight: bold;
@@ -29,40 +42,66 @@ nav a {
   white-space: nowrap;
 }
 
-nav a:hover {
+.nav-links a:hover {
   text-decoration: underline;
 }
 
-/* MOBILE NAV FIX */
-@media (max-width: 768px) {
-  nav {
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 12px 15px;
-  }
-
-  nav a {
-    margin: 8px 15px;
-  }
+/* HAMBURGER */
+.menu-toggle {
+  display: none;
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
 }
 
 /* =========================
-   HEADER
+   MOBILE NAV
+   ========================= */
+@media (max-width: 768px) {
+  .nav-inner {
+    justify-content: space-between;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 15px;
+  }
+
+  .nav-links a {
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+}
+
+
+/* =========================
+   HEADER (FULL WIDTH + INNER)
    ========================= */
 header {
   background: linear-gradient(to right, #1e3a8a, #2563eb);
   color: #fff;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: auto;
   text-align: center;
-  padding: 80px 20px;
+  padding: 50px 20px;
 }
 
 header img {
-  height: 90px;
-  margin-bottom: 20px;
-}
-
-header h1 {
-  margin: 10px 0;
+  height: 80px;
+  margin-bottom: 15px;
 }
 
 header p {
@@ -75,87 +114,56 @@ header p {
 section {
   max-width: 1100px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 50px 20px;
 }
 
 /* =========================
-   CARDS / BOXES
+   CARDS
    ========================= */
-.card,
-.box,
-.course,
-.service {
-  background: #ffffff;
-  padding: 35px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  margin-bottom: 30px;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
 }
 
-.card h2,
-.box h2,
-.course h2,
-.service h2 {
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card h2 {
   color: #1e40af;
 }
 
 /* =========================
    BUTTONS
    ========================= */
-.btn,
-button {
+.btn {
   display: inline-block;
-  margin-top: 20px;
-  padding: 12px 26px;
+  margin-top: 15px;
+  padding: 12px 20px;
   background: #2563eb;
   color: #fff;
   text-decoration: none;
   border-radius: 6px;
   font-weight: bold;
-  border: none;
-  cursor: pointer;
 }
 
-.btn:hover,
-button:hover {
+.btn:hover {
   background: #1e40af;
 }
 
 /* =========================
-   FORMS
+   HIGHLIGHT
    ========================= */
-input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 10px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 14px;
-}
-
-/* =========================
-   HIGHLIGHT SECTIONS
-   ========================= */
-.highlight,
-.cta {
+.highlight {
   background: #e0e7ff;
   text-align: center;
   padding: 40px 20px;
   border-radius: 10px;
-}
-
-/* =========================
-   BADGES
-   ========================= */
-.badges span {
-  display: inline-block;
-  background: #022c22;
-  color: #fff;
-  padding: 8px 14px;
-  border-radius: 20px;
-  margin: 5px;
-  font-size: 14px;
 }
 
 /* =========================
@@ -183,11 +191,3 @@ footer {
   font-weight: bold;
 }
 
-/* =========================
-   LINKS
-   ========================= */
-a {
-  color: #2563eb;
-  text-decoration: none;
-  font-weight: bold;
-}

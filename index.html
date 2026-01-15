@@ -6,115 +6,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="ShashinTech offers business digital solutions and professional training in Excel, Power BI, Data Analytics and custom software.">
 
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      color: #333;
-    }
-
-    /* ✅ NAVIGATION – ONLY CHANGE */
-    nav {
-      background: #0f172a;
-      padding: 15px 40px;
-      display: flex;
-      justify-content: flex-end; /* TOP RIGHT */
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: #fff;
-      margin-left: 30px;
-      text-decoration: none;
-      font-weight: bold;
-      white-space: nowrap;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-
-    header {
-      background: linear-gradient(to right, #1e3a8a, #2563eb);
-      color: #fff;
-      text-align: center;
-      padding: 50px 20px;
-    }
-    header img {
-      height: 80px;
-      margin-bottom: 15px;
-    }
-    section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 50px 20px;
-    }
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 30px;
-    }
-    .card {
-      background: #fff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .card h2 {
-      color: #1e40af;
-    }
-    .btn {
-      display: inline-block;
-      margin-top: 15px;
-      padding: 12px 20px;
-      background: #2563eb;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      font-weight: bold;
-    }
-    .highlight {
-      background: #e0e7ff;
-      text-align: center;
-      padding: 40px 20px;
-    }
-    footer {
-      background: #0f172a;
-      color: #fff;
-      text-align: center;
-      padding: 15px;
-    }
-    .whatsapp {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #25D366;
-      color: #fff;
-      padding: 12px 18px;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
+  <!-- COMMON CSS -->
+  <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-<!-- ✅ NAVIGATION (TEXT SAME, ONLY ALIGNMENT CHANGED) -->
+<!-- NAVIGATION (TEXT SAME) -->
 <nav>
-  <a href="index.html">Home</a>
-  <a href="business.html">Business Solutions</a>
-  <a href="training.html">Training</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
+  <div class="nav-inner">
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+
+    <div class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="business.html">Business Solutions</a>
+      <a href="training.html">Training</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </div>
 </nav>
+
 
 <!-- HERO -->
 <header>
-  <img src="logo.png" alt="ShashinTech Logo">
-  <h1>ShashinTech</h1>
-  <p>Digital Solutions for Businesses & Practical Training for Professionals</p>
+  <div class="header-inner">
+    <img src="logo.png" alt="ShashinTech Logo">
+    <h1>ShashinTech</h1>
+    <p>Digital Solutions for Businesses & Practical Training for Professionals</p>
+  </div>
 </header>
 
 <!-- TWO CORE AREAS -->
@@ -165,6 +85,13 @@
 <a class="whatsapp" href="https://wa.me/919715873450" target="_blank">
   WhatsApp
 </a>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("active");
+  }
+</script>
+
 
 <!-- FOOTER -->
 <footer>
