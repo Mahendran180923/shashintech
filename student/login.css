@@ -1,53 +1,108 @@
+/* =========================
+   STUDENT LOGIN PAGE CSS
+   ========================= */
+
 body {
-  background: #0f172a;
+  margin: 0;
   font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  color: #333;
 }
 
-.login-container {
-  width: 320px;
-  margin: 120px auto;
-  background: #fff;
-  padding: 25px;
+/* =========================
+   LOGIN WRAPPER
+   ========================= */
+.login-wrapper {
+  min-height: calc(100vh - 120px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+}
+
+/* =========================
+   LOGIN CARD
+   ========================= */
+.login-card {
+  background: #ffffff;
+  width: 100%;
+  max-width: 400px;
+  padding: 30px;
   border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   text-align: center;
 }
 
-.login-container h2 {
+.login-card h2 {
   margin-bottom: 5px;
+  color: #1e40af;
 }
 
-.sub {
-  color: #555;
+.login-card p {
   font-size: 14px;
+  color: #555;
   margin-bottom: 20px;
 }
 
-.login-container input {
-  width: 90%;
-  padding: 10px;
-  margin: 10px 0;
+/* =========================
+   INPUTS
+   ========================= */
+.login-card input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 15px;
 }
 
-.login-container button {
-  width: 95%;
-  padding: 10px;
+.login-card input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+.login-btn {
+  width: 100%;
+  padding: 12px;
   background: #2563eb;
-  color: #fff;
+  color: #ffffff;
   border: none;
-  border-radius: 5px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
   cursor: pointer;
 }
-.join-btn {
-  display: block;
-  background: #16a34a;
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-  border-radius: 5px;
-  margin-top: 15px;
-}
-#msg {
-  margin-top: 10px;
-  color: green;
+
+.login-btn:hover {
+  background: #1e40af;
 }
 
+/* =========================
+   INFO TEXT
+   ========================= */
+.login-info {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #666;
+}
+
+/* =========================
+   OTP BOX (LATER USE)
+   ========================= */
+.otp-box {
+  display: none;
+  margin-top: 15px;
+}
+
+/* =========================
+   FOOTER FIX
+   ========================= */
+footer {
+  background: #0f172a;
+  color: #ffffff;
+  text-align: center;
+  padding: 15px;
+}
