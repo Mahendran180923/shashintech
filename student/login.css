@@ -1,5 +1,10 @@
 /* =========================
-   STUDENT LOGIN PAGE CSS
+   STUDENT AUTH PAGES CSS
+   Used for:
+   - student-login.html
+   - otp-verify.html
+   - change-password.html
+   - dashboard.html
    ========================= */
 
 body {
@@ -10,9 +15,9 @@ body {
 }
 
 /* =========================
-   LOGIN WRAPPER
+   WRAPPER
    ========================= */
-.login-wrapper {
+.auth-wrapper {
   min-height: calc(100vh - 120px);
   display: flex;
   align-items: center;
@@ -21,9 +26,9 @@ body {
 }
 
 /* =========================
-   LOGIN CARD
+   CARD
    ========================= */
-.login-card {
+.auth-card {
   background: #ffffff;
   width: 100%;
   max-width: 400px;
@@ -33,12 +38,12 @@ body {
   text-align: center;
 }
 
-.login-card h2 {
+.auth-card h2 {
   margin-bottom: 5px;
   color: #1e40af;
 }
 
-.login-card p {
+.auth-card p {
   font-size: 14px;
   color: #555;
   margin-bottom: 20px;
@@ -47,7 +52,7 @@ body {
 /* =========================
    INPUTS
    ========================= */
-.login-card input {
+.auth-card input {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -56,7 +61,7 @@ body {
   font-size: 15px;
 }
 
-.login-card input:focus {
+.auth-card input:focus {
   outline: none;
   border-color: #2563eb;
 }
@@ -64,7 +69,7 @@ body {
 /* =========================
    BUTTON
    ========================= */
-.login-btn {
+.auth-btn {
   width: 100%;
   padding: 12px;
   background: #2563eb;
@@ -76,29 +81,30 @@ body {
   cursor: pointer;
 }
 
-.login-btn:hover {
+.auth-btn:hover {
   background: #1e40af;
 }
 
 /* =========================
    INFO TEXT
    ========================= */
-.login-info {
+.auth-info {
   margin-top: 15px;
   font-size: 13px;
   color: #666;
 }
 
 /* =========================
-   OTP BOX (LATER USE)
+   STATUS MESSAGE
    ========================= */
-.otp-box {
-  display: none;
-  margin-top: 15px;
+.status-msg {
+  margin-top: 10px;
+  font-size: 14px;
+  color: green;
 }
 
 /* =========================
-   FOOTER FIX
+   FOOTER
    ========================= */
 footer {
   background: #0f172a;
